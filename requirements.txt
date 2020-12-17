@@ -3,3 +3,4 @@ wagtail>=2.11,<2.12
 django-countries==7.0
 django-allauth>=0.44.0 
 django-widget-tweaks==1.4.8
+

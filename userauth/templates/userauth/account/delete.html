@@ -1,0 +1,5 @@
+<form method="post">
+    {% csrf_token %}
+    <p>{% trans "Are you sure you want to delete the account" %} {{ object.email }}?</p>
+    <button type="submit" class="btn btn-danger">{% trans "Delete" %}</button>
+</form>

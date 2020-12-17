@@ -21,6 +21,63 @@
                 {{ request.user.last_name|default:'' }}
             </div>
         </div>
+
+        <div class="row">
+            <div class="col border">
+                <small>{% trans "E-mail" %}:</small><br>
+                {{ request.user.email }}
+            </div>
+            <div class="col border">
+                <small>{% trans "Display name" %}:</small><br>
+                {{ request.user.display_name }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col border">
+                <small>{% trans "Date Of Birth" %}:</small><br>
+                {{ request.user.date_of_birth }}
+            </div>
+            <div class="col border">
+                <small>{% trans "Address 1" %}:</small><br>
+                {{ request.user.address1 }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col border">
+                <small>{% trans "Address 2" %}:</small><br>
+                {{ request.user.address2}}
+            </div>
+            <div class="col border">
+                <small>{% trans "Zip Code" %}:</small><br>
+                {{ request.user.zip_code }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col border">
+                <small>{% trans "City" %}:</small><br>
+                {{ request.user.city}}
+            </div>
+            <div class="col border">
+                <small>{% trans "Country" %}:</small><br>
+                {{ request.user.country  }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col border">
+                <small>{% trans "Mobile no" %}:</small><br>
+                {{ request.user.mobile_phone}}
+            </div>
+            <div class="col border">
+                <small>{% trans "Info" %}:</small><br>
+                {{ request.user.additional_information  }}
+            </div>
+        </div>
     </div>
 
 {% endblock %}
+
+<div class="text-center py-2">
+    <small>
+        <a href="{% url 'account_delete' request.user.pk %}" class="text-muted">{% trans "Delete your account" %}</a>
+    </small>
+</div>
